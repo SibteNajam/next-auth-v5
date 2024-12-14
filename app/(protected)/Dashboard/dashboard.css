@@ -1,0 +1,124 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 97%;
+  margin-top: 1rem;
+  /* border: 2px; Slight border for smooth transition */
+  border-radius: 10px; /* Smooth, rounded corners */
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card .row {
+  width: 100%;
+  height: 100%;
+}
+.row .col1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-left: 1rem;
+}
+.col1 > h1 {
+  align-self: center;
+  margin-top: 1rem;
+}
+
+/* Animated Header */
+.header {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #212b35;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Slight lift effect on hover */
+  box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow on hover */
+}
+
+.card-content {
+  padding: 1.5rem;
+  color: #333; /* Dark text color for contrast */
+  background-color: transparent; /* Ensure content background is transparent */
+}
+
+/*-------------------------------------------
+/* Input Field Styling */
+.input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+  width: 95%;
+}
+
+.text-input {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 2px solid #d4d4d4;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+.text-input:focus {
+  outline: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  border-color: #aaa; /* Slightly different border color */
+  transform: translateY(-2px); /* Slight upward movement */
+}
+
+.generate-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #fff;
+  color: #007bff;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 2px solid #d4d4d4;
+}
+
+.generate-button:hover {
+  background-color: #0056b3;
+  color: #fff;
+}
+
+/* Output Box Styling */
+/* Output Box Styling */
+/* Output Box Styling */
+.output-box {
+  width: 95%;
+  height: 25%;
+  border: 2px solid #d4d4d4;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  overflow-y: auto; /* Enables vertical scrolling when content overflows */
+  background-color: #f9f9f9; /* Light background for better readability */
+}
+
+/* Card Body Styling */
+.output-box .card-body {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1rem;
+  color: #333;
+  white-space: pre-wrap; /* Preserves formatting and wraps text */
+  word-wrap: break-word; /* Ensures long words wrap within the box */
+  padding: 15px; /* Adds padding to ensure content doesn't touch the edges */
+  margin: 0; /* Resets default margin */
+  max-height: 100%; /* Ensures the content doesn't exceed the box height */
+}
+
+.chart-box {
+  border: 0;
+}

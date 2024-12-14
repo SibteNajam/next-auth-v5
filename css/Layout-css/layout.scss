@@ -1,0 +1,78 @@
+.containerr {
+  height: 100vh;
+  width: 100vw;
+}
+.custom-Row {
+  height: 100%;
+  width: 100%;
+}
+
+/* Sidebar Styles */
+.sidebar-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f9fafb; /* Optional: for sidebar background */
+  height: 100%; /* Ensure it takes full height */
+  /* padding: 10px; Adjust padding as needed */
+  width: 15%;
+  &.collapsed {
+    width: 5%;
+  }
+}
+
+.menu {
+  color: #888;
+  opacity: 0.7;
+  padding: 0 0 0.2rem 0.3rem;
+  margin-top: 10rem;
+  overflow-x: hidden;
+  margin: 1rem;
+  &.collapsed {
+    display: none; /* Hide the menu when collapsed */
+  }
+}
+/* Main Content Styles */
+
+.main-content-col {
+  // padding-top: 20px;
+  height: 100%;
+  background: linear-gradient(to right, #dde9f3, #f3f6fd, #eaf4ec);
+  transition: width 0.3s ease;
+  width: calc(100% - 15%);
+
+  &.collapsed {
+    width: calc(100% - 5%);
+  }
+}
+.main-content {
+  height: 94%;
+  margin-top: 5px;
+  border-radius: 20px;
+}
+
+/* Custom widths for medium screens (md) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .sidebar-col {
+    width: 25%;
+    transition: width 0.3s ease;
+    &.collapsed {
+      width: 5%;
+    }
+  }
+
+  .main-content-col {
+    width: 75%;
+    transition: width 0.3s ease;
+    &.collapsed {
+      width: 95%;
+      transition: width 0.3s ease;
+    }
+  }
+}
+@media (max-width: 767px) {
+  .sidebar-col,
+  .main-content-col {
+    width: 100%; /* Full width for both on small screens */
+  }
+}

@@ -1,0 +1,39 @@
+header {
+  width: 100%;
+  height: 5%;
+  /* border-bottom: 2px solid rgb(212, 212, 212); */
+  /* box-shadow: 0 20px 5px rgba(231, 231, 231, 0.1); Subtle grey shadow */
+}
+.main-header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Aligns content vertically */
+  height: 50px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.8); /* Choose a complementary color */
+  padding: 16px; /* Add space for better readability */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add subtle shadow for depth */
+  /* border-radius: 7px; */
+}
+
+.header-right {
+  display: flex;
+  align-items: center; /* Aligns items vertically */
+}
+
+.header-right ul {
+  display: flex; /* Makes the list horizontal */
+  gap: 20px; /* Adds spacing between the list items */
+  list-style: none; /* Removes bullet points */
+  margin: 0; /* Removes default margin */
+  padding: 0; /* Removes default padding */
+}
+
+/* icon   */
+
+.header-icon {
+  color: rgb(165, 165, 165);
+  width: 1.7rem;
+  height: 1.7rem;
+  cursor: pointer;
+}

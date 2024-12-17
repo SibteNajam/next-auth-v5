@@ -81,8 +81,7 @@ body,
   }
 }
 .sidebar-icon {
-  fill: rgb(255, 255, 255); /* Use fill instead of color */
-  width: 1.4rem;
-  height: 1.4rem;
+  width: 1.6rem;
+  height: 1.6rem;
   cursor: pointer;
 }

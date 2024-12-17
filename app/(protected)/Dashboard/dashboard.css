@@ -52,15 +52,27 @@
 
 /*-------------------------------------------
 /* Input Field Styling */
-.input-container {
+.Form {
   display: flex;
   flex-direction: column;
-  align-items: stretch;
-  margin-bottom: 1rem;
-  margin-top: 2rem;
+  align-items: center;
+  /* margin-bottom: 1rem; */
+  margin-top: 1rem;
   width: 95%;
 }
+.Form .form-inputs {
+  width: 50%;
+}
+.db-input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch; /* Stretch children to full width */
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+  width: 100%;
+}
 
+/* Ensure the text-input takes full width */
 .text-input {
   width: 100%;
   padding: 10px;
@@ -75,17 +87,22 @@
   border-color: #aaa; /* Slightly different border color */
   transform: translateY(-2px); /* Slight upward movement */
 }
-
+.invalid-feedback {
+  color: red;
+  font-size: 1rem; /* Slightly smaller font for error messages */
+  margin-top: 0.25rem; /* Small spacing above the error message */
+}
 .generate-button {
   width: 100%;
-  padding: 10px;
+  /* padding: 5px 13px 5px 13px; */
   background-color: #fff;
   color: #007bff;
-  font-size: 1rem;
+  font-size: 1.1rem;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   border: 2px solid #d4d4d4;
+  font-weight: bold;
 }
 
 .generate-button:hover {
@@ -93,8 +110,6 @@
   color: #fff;
 }
 
-/* Output Box Styling */
-/* Output Box Styling */
 /* Output Box Styling */
 .output-box {
   width: 95%;

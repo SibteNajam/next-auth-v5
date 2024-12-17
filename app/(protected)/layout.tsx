@@ -26,7 +26,8 @@ const ProtectedLayout = ({ children }: ProtectedLayoutProps) => {
     }
     return "";
   };
-  const toggleSidebar = () => {
+  const toggleSidebar = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
     setIsSidebarOpen((prev) => !prev);
   };
   useEffect(() => {

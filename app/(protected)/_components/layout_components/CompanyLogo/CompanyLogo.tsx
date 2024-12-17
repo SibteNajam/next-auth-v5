@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image from "next/image"; // Importing the Image component
-import CompanyLogoImage from "../../../../../assets/images/AM.jpg";
+import CompanyLogoImage from "../../../../../assets/images/ASK.jpg";
 import "@/app/(protected)/_components/layout_components/Sidebar/sidebar.scss";
 interface CompanyLogoProps {
   isSidebarOpen: boolean;

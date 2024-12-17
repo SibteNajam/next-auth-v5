@@ -54,6 +54,9 @@
   border-radius: 10px;
   font-size: 1.2rem;
   padding: 0.3rem;
+  @media (max-width: 768px) {
+    font-size: 0.5rem; /* Smaller font size for mobile */
+  }
 }
 .sidebar-items ul li:hover {
   cursor: pointer;
@@ -65,10 +68,14 @@
   border-radius: 10px;
   padding: 5px;
   margin-left: 4px;
+  &:hover {
+    background-color: #0056b3; /* Highlight background */
+  }
 }
+
 .sidebar-items ul li.active .nav-item {
   font-weight: bold;
-  color: #d8e4e2; /* Bold the active link */
+  color: #d8e4e2 !important; /* Bold the active link */
 }
 .nav-item {
   display: flex;

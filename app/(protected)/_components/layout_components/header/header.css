@@ -11,9 +11,10 @@ header {
   height: 50px;
   width: 100%;
   background-color: rgba(255, 255, 255, 0.8); /* Choose a complementary color */
-  padding: 16px; /* Add space for better readability */
+  padding: 0 16px 0 16px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add subtle shadow for depth */
-  /* border-radius: 7px; */
+  border-radius: 7px;
+  margin-top: 0.3rem;
 }
 
 .header-right {
@@ -28,11 +29,18 @@ header {
   margin: 0; /* Removes default margin */
   padding: 0; /* Removes default padding */
 }
+.header-right ul li {
+  margin-top: 0.4rem;
+}
+.signin-dropdown {
+  display: flex;
+  flex-direction: column;
+}
 
 /* icon   */
 
 .header-icon {
-  color: rgb(165, 165, 165);
+  color: rgb(92, 92, 92);
   width: 1.7rem;
   height: 1.7rem;
   cursor: pointer;

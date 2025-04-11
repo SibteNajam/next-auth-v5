@@ -8,12 +8,20 @@ import { ToggleIcon } from "@/components/SVGIcons/ToggleIcon";
 import { UserIcon } from "@/components/SVGIcons/UserIcon";
 import { DropDownIcon } from "@/components/SVGIcons/DropDownIcon";
 
+import { usePathname } from "next/navigation";
+
 interface HeaderProps {
   onToggleSidebar: () => void; // Receive the toggle function as a prop
 }
 
 const Header: FC<any> = ({ onToggleSidebar }: HeaderProps) => {
   const [isDropdownVisible, setDropdownVisible] = useState(false);
+  const pathname = usePathname();
+
+  // Don't render header on /Dashboard
+  if (pathname === "/Dashboard") {
+    return null;
+  }
 
   const handleToggleDropdown = () => {
     setDropdownVisible(!isDropdownVisible);

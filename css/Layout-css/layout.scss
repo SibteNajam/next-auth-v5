@@ -1,6 +1,7 @@
 .containerr {
   height: 100vh;
   width: 100vw;
+  overflow: hidden;
 }
 .custom-Row {
   height: 100%;
@@ -35,7 +36,8 @@
 /* Main Content Styles */
 
 .main-content-col {
-  // padding-top: 20px;
+  overflow: auto;
+  padding-left: 0.1rem;
   height: 100%;
   background: linear-gradient(to right, #dde9f3, #f3f6fd, #eaf4ec);
   transition: width 0.3s ease;

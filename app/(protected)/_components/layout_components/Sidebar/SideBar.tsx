@@ -49,8 +49,10 @@ const Sidebar: FC<SidebarProps> = ({
                 }`}
               >
                 <Link href={item.path || "#"} className="nav-item">
-                  {item.icon && <span>{item.icon}</span>}
-                  {isSidebarOpen && <span>{item.title}</span>}
+                  {item.icon && <span className="text-md">{item.icon}</span>}
+                  {isSidebarOpen && (
+                    <span className="text-sm">{item.title}</span>
+                  )}
                 </Link>
                 {item.children && (
                   <button onClick={() => handleToggleSubmodule(item.title)}>

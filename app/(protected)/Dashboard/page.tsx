@@ -205,11 +205,11 @@ function DashBoard() {
                 interface is intuitive and the performance is outstanding
               </p>
               <div className="flex items-center">
-                <Image
+                {/* <Image
                   src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=48&h=48&q=80"
                   alt="Customer"
                   className="h-10 w-10 rounded-full"
-                />
+                /> */}
                 <div className="ml-3">
                   <p className="text-gray-900 font-medium">John Doe</p>
                   <p className="text-gray-600">CTO, TechCorp</p>
@@ -222,11 +222,11 @@ function DashBoard() {
                 helped us make better business decisions
               </p>
               <div className="flex items-center">
-                <Image
+                {/* <Image
                   src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=48&h=48&q=80"
                   alt="Customer"
                   className="h-10 w-10 rounded-full"
-                />
+                /> */}
                 <div className="ml-3">
                   <p className="text-gray-900 font-medium">Jane Smith</p>
                   <p className="text-gray-600">Data Analyst, Analytics Co</p>
@@ -239,11 +239,11 @@ function DashBoard() {
                 need them and quick to resolve issues
               </p>
               <div className="flex items-center">
-                <Image
+                {/* <Image
                   src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=48&h=48&q=80"
                   alt="Customer"
                   className="h-10 w-10 rounded-full"
-                />
+                /> */}
                 <div className="ml-3">
                   <p className="text-gray-900 font-medium">Mike Johnson</p>
                   <p className="text-gray-600">CEO, StartupX</p>
@@ -283,7 +283,7 @@ function DashBoard() {
             <div>
               <h3 className="text-gray-900 font-bold mb-4">Connect</h3>
               <div className="flex space-x-4">
-                <Github className="h-6 w-6 text-gray-600 hover:text-gray-900 cursor-pointer" />
+                {/* <Github className="h-6 w-6 text-gray-600 hover:text-gray-900 cursor-pointer" /> */}
                 <MessageSquare className="h-6 w-6 text-gray-600 hover:text-gray-900 cursor-pointer" />
               </div>
             </div>

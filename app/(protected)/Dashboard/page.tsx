@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { Card, Form, Button, Row, Col } from "react-bootstrap";
 import "./dashboard.css";
+import ChartComponent from "../_components/Chart";
 
 const DashBoard = () => {
   const [inputText, setInputText] = useState("");
@@ -66,7 +67,7 @@ DELETE FROM Employees WHERE EmployeeID = 3;`}
         {/* Second Column for Chart */}
         <Col md={6} className="mb-3">
           <div className="chart-placeholder">
-            <h5 className="text-center">Chart Integration Here</h5>
+            <ChartComponent />
           </div>
         </Col>
       </Row>

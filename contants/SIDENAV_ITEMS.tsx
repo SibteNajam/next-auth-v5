@@ -8,7 +8,7 @@ export const SIDENAV_ITEMS: SideNavItem[] = [
     icon: <DashboardIcon className="sidebar-icon" />,
   },
   {
-    title: "Connect_Data-Base",
+    title: "Connect-DB",
     path: "/Connect-Data-Base",
     icon: <Fullscreen className="sidebar-icon" />,
   },

@@ -44,14 +44,14 @@ const Sidebar: FC<SidebarProps> = ({
             {items.map((item, index) => (
               <li
                 key={index}
-                className={`${!isSidebarOpen ? "collapsed" : ""}${
-                  activeItem === item.title ? "active" : ""
-                }`}
+                className={`sidebar-item ${
+                  isSidebarOpen ? "" : "collapsed"
+                } ${activeItem === item.title ? "active" : ""}`}
               >
                 <Link href={item.path || "#"} className="nav-item">
                   {item.icon && <span className="text-md">{item.icon}</span>}
                   {isSidebarOpen && (
-                    <span className="text-sm">{item.title}</span>
+                    <span className="font-[Intr] text-sm">{item.title}</span>
                   )}
                 </Link>
                 {item.children && (
@@ -66,7 +66,9 @@ const Sidebar: FC<SidebarProps> = ({
                       <li key={subIndex}>
                         <Link href={subItem.path || "#"}>
                           {subItem.icon && (
-                            <span className="icon">{subItem.icon}</span>
+                            <span className="icon text-blue-300">
+                              {subItem.icon}
+                            </span>
                           )}
                           {subItem.title}
                         </Link>

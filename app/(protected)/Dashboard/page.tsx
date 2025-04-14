@@ -62,25 +62,25 @@ function DashBoard() {
             <div className="flex space-x-4">
               <a
                 href="#"
-                className="text-gray-600 hover:text-gray-900 px-3 py-2"
+                className="text-decoration-none text-gray-600 hover:text-gray-900 px-3 py-2"
               >
                 Dashboard
               </a>
               <a
                 href="#"
-                className="text-gray-600 hover:text-gray-900 px-3 py-2"
+                className="text-decoration-none text-gray-600 hover:text-gray-900 px-3 py-2"
               >
                 Products
               </a>
               <a
                 href="#"
-                className="text-gray-600 hover:text-gray-900 px-3 py-2"
+                className="text-decoration-none text-gray-600 hover:text-gray-900 px-3  decoration-none py-2"
               >
                 Documentation
               </a>
               <a
                 href="#"
-                className="text-gray-600 hover:text-gray-900 px-3 py-2"
+                className="text-decoration-none text-gray-600 hover:text-gray-900 px-3 py-2"
               >
                 Contact
               </a>
@@ -91,45 +91,45 @@ function DashBoard() {
 
       {/* Dashboard Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <h1 className="text-3xl font-bold text-gray-900 mb-8">
+        {/* <h1 className="text-3xl font-bold text-gray-900 mb-8">
           Dashboard Overview
-        </h1>
+        </h1> */}
 
         {/* Stats Cards */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
           <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
             <div className="flex items-center">
-              <BarChart3 className="h-10 w-10 text-blue-600" />
+              <BarChart3 className="h-10 w-10 text-blue-500" />
               <div className="ml-4">
-                <p className="text-gray-600">Total Sales</p>
-                <p className="text-2xl font-bold text-gray-900">$52,000</p>
+                <p className="text-blue-600 font-medium">Total Sales</p>
+                <p className="text-2xl font-semibold text-black">48</p>
               </div>
             </div>
           </div>
           <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
             <div className="flex items-center">
-              <PieChartIcon className="h-10 w-10 text-blue-600" />
+              <PieChartIcon className="h-10 w-10 text-orange-400" />
               <div className="ml-4">
-                <p className="text-gray-600">Products</p>
-                <p className="text-2xl font-bold text-gray-900">24</p>
+                <p className="text-orange-600 font-medium">Products</p>
+                <p className="text-2xl font-semibold text-black">20</p>
               </div>
             </div>
           </div>
           <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
             <div className="flex items-center">
-              <Users className="h-10 w-10 text-blue-600" />
+              <Users className="h-10 w-10 text-green-400" />
               <div className="ml-4">
-                <p className="text-gray-600">Customers</p>
-                <p className="text-2xl font-bold text-gray-900">1,200</p>
+                <p className="text-green-600 font-medium">Customers</p>
+                <p className="text-2xl font-semibold text-black">1000</p>
               </div>
             </div>
           </div>
           <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
             <div className="flex items-center">
-              <MessageSquare className="h-10 w-10 text-blue-600" />
+              <MessageSquare className="h-10 w-10 text-red-400" />
               <div className="ml-4">
-                <p className="text-gray-600">Support Tickets</p>
-                <p className="text-2xl font-bold text-gray-900">48</p>
+                <p className="text-red-600 font-medium">Support Tickets</p>
+                <p className="text-2xl font-semibold text-black">48</p>
               </div>
             </div>
           </div>

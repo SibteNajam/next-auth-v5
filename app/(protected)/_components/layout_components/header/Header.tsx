@@ -12,9 +12,10 @@ import { usePathname } from "next/navigation";
 
 interface HeaderProps {
   onToggleSidebar: () => void; // Receive the toggle function as a prop
+  isSidebarOpen: boolean;
 }
 
-const Header: FC<any> = ({ onToggleSidebar }: HeaderProps) => {
+const Header: FC<any> = ({ onToggleSidebar, isSidebarOpen }: HeaderProps) => {
   const [isDropdownVisible, setDropdownVisible] = useState(false);
   const pathname = usePathname();
 
@@ -47,7 +48,12 @@ const Header: FC<any> = ({ onToggleSidebar }: HeaderProps) => {
   return (
     <header>
       <div className="main-header-container bg-white border-b border-gray-200 shadow-sm">
-        <ToggleIcon onClick={onToggleSidebar} className="header-icon" />
+        <ToggleIcon
+          onClick={onToggleSidebar}
+          className={` header-icon transition-transform duration-200 ${
+            isSidebarOpen ? "rotate-180" : ""
+          }`}
+        />
         <div className="header-right">
           <ul>
             <li>

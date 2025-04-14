@@ -66,7 +66,10 @@ const ProtectedLayout = ({ children }: ProtectedLayoutProps) => {
             className={`main-content-col ${!isSidebarOpen && "collapsed"}`}
           >
             {" "}
-            <Header onToggleSidebar={toggleSidebar} />
+            <Header
+              onToggleSidebar={toggleSidebar}
+              isSidebarOpen={isSidebarOpen}
+            />
             <div className="main-content ml-0">{children}</div>
           </Col>
         </Row>

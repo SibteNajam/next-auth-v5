@@ -126,7 +126,7 @@
 
 /* Card Body Styling */
 .output-box .card-body {
-  font-family: "Courier New", Courier, monospace;
+  /* font-family: "Courier New", Courier, monospace; */
   font-size: 1rem;
   color: #333;
   white-space: pre-wrap; /* Preserves formatting and wraps text */
@@ -138,4 +138,24 @@
 
 .chart-box {
   border: 0;
+}
+.header-anchors {
+  display: flex;
+  gap: 1rem; /* Tailwind's space-x-4 is 1rem gap */
+
+  a {
+    text-decoration: none;
+    color: #4b5563;
+    font-weight: 500;
+
+    padding: 0.5rem 0.75rem;
+
+    transition:
+      color 0.3s ease,
+      transform 0.3s ease;
+    &:hover {
+      color: #3e7bff;
+      transform: scale(1.08);
+    }
+  }
 }

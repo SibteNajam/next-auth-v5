@@ -47,7 +47,7 @@ const Header: FC<any> = ({ onToggleSidebar, isSidebarOpen }: HeaderProps) => {
 
   return (
     <header>
-      <div className="main-header-container bg-white border-b border-gray-200 shadow-sm">
+      <div className="main-header-container  bg-white border-b border-gray-200 shadow-sm">
         <ToggleIcon
           onClick={onToggleSidebar}
           className={` header-icon transition-transform duration-200 ${

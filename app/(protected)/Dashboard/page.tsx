@@ -22,6 +22,7 @@ import {
   MessageSquare,
   Github,
 } from "lucide-react";
+import "./dashboard.css";
 
 // Dummy data for charts
 const yearlyData = [
@@ -54,36 +55,17 @@ function DashBoard() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center">
-              <Database className="h-8 w-8 text-blue-600" />
-              <span className="ml-2 text-xl font-bold text-gray-900">
-                ASK DB
+              {/* <Database className="h-8 w-8 text-blue-500" /> */}
+              <span className="ml-2 text-xl font-bold text-blue-500">
+                DashBoard
               </span>
             </div>
-            <div className="flex space-x-4">
-              <a
-                href="#"
-                className="text-decoration-none text-gray-600 hover:text-gray-900 px-3 py-2"
-              >
-                Dashboard
-              </a>
-              <a
-                href="#"
-                className="text-decoration-none text-gray-600 hover:text-gray-900 px-3 py-2"
-              >
-                Products
-              </a>
-              <a
-                href="#"
-                className="text-decoration-none text-gray-600 hover:text-gray-900 px-3  decoration-none py-2"
-              >
-                Documentation
-              </a>
-              <a
-                href="#"
-                className="text-decoration-none text-gray-600 hover:text-gray-900 px-3 py-2"
-              >
-                Contact
-              </a>
+
+            <div className="header-anchors">
+              <a href="#">Dashboard</a>
+              <a href="#">Products</a>
+              <a href="#">Documentation</a>
+              <a href="#">Contact</a>
             </div>
           </div>
         </div>
@@ -98,37 +80,37 @@ function DashBoard() {
         {/* Stats Cards */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
           <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
-            <div className="flex items-center">
-              <BarChart3 className="h-10 w-10 text-blue-500" />
-              <div className="ml-4">
-                <p className="text-blue-600 font-medium">Total Sales</p>
+            <div className="flex flex-col items-center">
+              <p className="text-[#3B82F6] font-medium">Total Sales</p>
+              <div className="flex justify-between space-x-4">
+                <BarChart3 className="h-10 w-10 text-blue-500" />
                 <p className="text-2xl font-semibold text-black">48</p>
               </div>
             </div>
           </div>
           <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
-            <div className="flex items-center">
-              <PieChartIcon className="h-10 w-10 text-orange-400" />
-              <div className="ml-4">
-                <p className="text-orange-600 font-medium">Products</p>
+            <div className="flex flex-col items-center">
+              <p className="text-orange-600 font-medium">Products</p>
+              <div className="flex justify-between space-x-4">
+                <PieChartIcon className="h-10 w-10 text-orange-400" />
                 <p className="text-2xl font-semibold text-black">20</p>
               </div>
             </div>
           </div>
           <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
-            <div className="flex items-center">
-              <Users className="h-10 w-10 text-green-400" />
-              <div className="ml-4">
-                <p className="text-green-600 font-medium">Customers</p>
+            <div className="flex flex-col items-center">
+              <p className="text-green-600 font-medium">Customers</p>
+              <div className="flex justify-between space-x-4">
+                <Users className="h-10 w-10 text-green-400" />
                 <p className="text-2xl font-semibold text-black">1000</p>
               </div>
             </div>
           </div>
           <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
-            <div className="flex items-center">
-              <MessageSquare className="h-10 w-10 text-red-400" />
-              <div className="ml-4">
-                <p className="text-red-600 font-medium">Support Tickets</p>
+            <div className="flex flex-col items-center">
+              <p className="text-red-600 font-medium">Support Tickets</p>
+              <div className="flex justify-between space-x-4">
+                <MessageSquare className="h-10 w-10 text-red-400" />
                 <p className="text-2xl font-semibold text-black">48</p>
               </div>
             </div>
@@ -138,7 +120,7 @@ function DashBoard() {
         {/* Charts */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
           <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
-            <h2 className="text-xl font-bold text-gray-900 mb-4">
+            <h2 className="text-xl font-semibold text-[#52BA82] mb-4">
               Yearly Sales
             </h2>
             <LineChart width={500} height={300} data={yearlyData}>
@@ -161,7 +143,7 @@ function DashBoard() {
             </LineChart>
           </div>
           <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
-            <h2 className="text-xl font-bold text-gray-900 mb-4">
+            <h2 className="text-xl ffont-semibold text-[#3B82F6] mb-4">
               Product Sales Distribution
             </h2>
             <PieChart width={500} height={300}>

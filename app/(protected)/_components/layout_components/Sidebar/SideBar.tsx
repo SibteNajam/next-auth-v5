@@ -51,7 +51,7 @@ const Sidebar: FC<SidebarProps> = ({
                 <Link href={item.path || "#"} className="nav-item">
                   {item.icon && <span className="text-md">{item.icon}</span>}
                   {isSidebarOpen && (
-                    <span className="font-[Intr] text-sm">{item.title}</span>
+                    <span className=" text-sm">{item.title}</span>
                   )}
                 </Link>
                 {item.children && (

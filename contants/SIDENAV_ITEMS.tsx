@@ -13,9 +13,9 @@ export const SIDENAV_ITEMS: SideNavItem[] = [
     path: "/Connect-Data-Base",
     icon: <DBIcon className="sidebar-icon" />,
   },
-  {
-    title: "Generate-SQL",
-    path: "/Generate-SQL",
-    icon: <Fullscreen className="sidebar-icon" />,
-  },
+  // {
+  //   title: "Generate-SQL",
+  //   path: "/Generate-SQL",
+  //   icon: <Fullscreen className="sidebar-icon" />,
+  // },
 ];

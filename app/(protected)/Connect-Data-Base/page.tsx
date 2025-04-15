@@ -233,7 +233,7 @@ const ConnectDataBase = () => {
                     <option value="">-- Select Database --</option>
                     <option value="retailshop">retail shop</option>
                     <option value="HMS">HMS</option>
-                    <option value="database1">database1</option>
+                    <option value="database1">fyptest</option>
                     <option value="LMS">LMS</option>
                   </Form.Control>
                   {/* {errors.database && (

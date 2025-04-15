@@ -46,11 +46,18 @@
   &.collapsed {
     width: calc(100% - 5%);
   }
+  // Hide scrollbar (cross-browser)
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+
+  &::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, and Opera */
+  }
 }
 .main-content {
   height: 94%;
-  margin-top: 5px;
-  border-radius: 20px;
+  margin-top: -15px;
+  border-radius: 0px;
 }
 
 /* Custom widths for medium screens (md) */

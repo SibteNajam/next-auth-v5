@@ -81,7 +81,7 @@ function DashBoard() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
           <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
             <div className="flex flex-col items-center">
-              <p className="text-[#3B82F6] font-medium">Total Sales</p>
+              <p className="font-medium">Total Sales</p>
               <div className="flex justify-between space-x-4">
                 <BarChart3 className="h-10 w-10 text-blue-500" />
                 <p className="text-2xl font-semibold text-black">48</p>
@@ -90,7 +90,7 @@ function DashBoard() {
           </div>
           <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
             <div className="flex flex-col items-center">
-              <p className="text-orange-600 font-medium">Products</p>
+              <p className="font-medium">Products</p>
               <div className="flex justify-between space-x-4">
                 <PieChartIcon className="h-10 w-10 text-orange-400" />
                 <p className="text-2xl font-semibold text-black">20</p>
@@ -99,7 +99,7 @@ function DashBoard() {
           </div>
           <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
             <div className="flex flex-col items-center">
-              <p className="text-green-600 font-medium">Customers</p>
+              <p className="font-medium">Customers</p>
               <div className="flex justify-between space-x-4">
                 <Users className="h-10 w-10 text-green-400" />
                 <p className="text-2xl font-semibold text-black">1000</p>
@@ -108,7 +108,7 @@ function DashBoard() {
           </div>
           <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
             <div className="flex flex-col items-center">
-              <p className="text-red-600 font-medium">Support Tickets</p>
+              <p className=" font-medium">Support Tickets</p>
               <div className="flex justify-between space-x-4">
                 <MessageSquare className="h-10 w-10 text-red-400" />
                 <p className="text-2xl font-semibold text-black">48</p>

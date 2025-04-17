@@ -53,9 +53,10 @@
   justify-content: flex-start;
   border-radius: 10px;
   font-size: 1.2rem;
+  font-weight: 100;
   padding: 0.3rem;
   @media (max-width: 768px) {
-    font-size: 0.5rem; /* Smaller font size for mobile */
+    font-size: 0.5rem;
   }
 }
 .sidebar-items ul li:hover {
@@ -63,19 +64,16 @@
   background-color: #d5e3ff;
 }
 .sidebar-items ul li.active {
-  background-color: #0056b3; /* Highlight background */
-  color: #dddddd; /* Highlight text color */
+  background-color: #2563eb;
   border-radius: 10px;
   padding: 5px;
   margin-left: 4px;
-  &:hover {
-    background-color: #0056b3; /* Highlight background */
-  }
+  font-weight: bolder;
 }
 
 .sidebar-items ul li.active .nav-item {
-  font-weight: bold;
-  color: #d8e4e2 !important; /* Bold the active link */
+  font-weight: 300;
+  color: #ffffff !important; /* Bold the active link */
 }
 .nav-item {
   display: flex;
@@ -84,5 +82,6 @@
   gap: 1rem; /* Space between the icon and the title */
   text-decoration: none; /* Remove default underline */
   color: rgb(56, 56, 56);
+  font-weight: 500;
   margin-left: 1rem;
 }

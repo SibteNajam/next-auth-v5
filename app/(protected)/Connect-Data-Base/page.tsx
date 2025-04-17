@@ -1,15 +1,15 @@
 "use client";
 import React, { useState } from "react";
 import { Card, Button, Form, Nav } from "react-bootstrap";
-import { useForm, SubmitHandler } from "react-hook-form";
-import { yupResolver } from "@hookform/resolvers/yup";
-import { ConnectDBR } from "@/resolver/ConnectDataBaseResolver";
+// import { useForm, SubmitHandler } from "react-hook-form";
+// import { yupResolver } from "@hookform/resolvers/yup";
+// import { ConnectDBR } from "@/resolver/ConnectDataBaseResolver";
 import "./styles.css";
-interface IFormInput {
-  host: string;
-  user: string;
-  password: string;
-}
+// interface IFormInput {
+//   host: string;
+//   user: string;
+//   password: string;
+// }
 interface QueryResult {
   rows?: any[];
   fields?: string[];
@@ -37,27 +37,30 @@ const ConnectDataBase = () => {
   ];
   const [currentStep, setCurrentStep] = useState(1);
 
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm<IFormInput>({
-    resolver: yupResolver(ConnectDBR),
-  });
+  // const {
+  //   register,
+  //   handleSubmit,
+  //   formState: { errors },
+  // } = useForm<any>({
+  //   resolver: yupResolver(ConnectDBR),
+  // });
 
   const [generatedSQL, setGeneratedSQL] = useState("");
 
-  const onSubmit: SubmitHandler<IFormInput> = (data) => {
-    console.log("Form Data:", data);
-    // goToNextStep();
-  };
+  // const onSubmit: SubmitHandler<any> = (data) => {
+  //   console.log("Form Data:", data);
+  //   // goToNextStep();
+  // };
   const goToNextStep = async () => {
     if (currentStep === 1) {
-      const isValid = await handleSubmit(async () => {
-        await listDatabases(); // Call API to list databases
-        setCurrentStep((prev) => prev + 1); // Move to next step after fetching
-      })();
+      // const isValid = await handleSubmit(async () => {
+      await listDatabases(); // Call API to list databases
+      setCurrentStep((prev) => prev + 1); // Move to next step after fetching
+      // })();
       return;
+    }
+    if (currentStep === 2) {
+      // want to call fetchschema in second step when user select a database
     }
 
     if (currentStep < steps.length) {
@@ -164,7 +167,7 @@ const ConnectDataBase = () => {
           ))}
         </Nav>
 
-        <Form onSubmit={handleSubmit(onSubmit)} className="Form">
+        <form className="Form">
           {/* Host Name Input */}
 
           <div className="form-inputs">
@@ -175,13 +178,15 @@ const ConnectDataBase = () => {
                     className="text-input"
                     type="text"
                     placeholder="Enter host name"
-                    {...register("host")}
+                    value={host}
+                    onChange={(e) => setPassword(e.target.value)}
+                    // {...register("host")}
                   />
-                  {errors.host && (
+                  {/* {errors.host && (
                     <div className="invalid-feedback">
                       {errors.host.message}
                     </div>
-                  )}
+                  )} */}
                 </Form.Group>
 
                 {/* Username Input */}
@@ -190,13 +195,15 @@ const ConnectDataBase = () => {
                     className="text-input"
                     type="text"
                     placeholder="Enter username"
-                    {...register("user")}
+                    value={user}
+                    onChange={(e) => setPassword(e.target.value)}
+                    // {...register("user")}
                   />
-                  {errors.user && (
+                  {/* {errors.user && (
                     <div className="invalid-feedback">
                       {errors.user.message}
                     </div>
-                  )}
+                  )} */}
                 </Form.Group>
                 {/* Password Input */}
                 <Form.Group className="input-container">
@@ -204,13 +211,15 @@ const ConnectDataBase = () => {
                     className="text-input"
                     type="password"
                     placeholder="Enter password"
-                    {...register("password")}
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    // {...register("password")}
                   />
-                  {errors.password && (
+                  {/* {errors.password && (
                     <p className="invalid-feedback">
                       {errors.password.message}
                     </p>
-                  )}
+                  )} */}
                 </Form.Group>
               </>
             )}
@@ -225,16 +234,16 @@ const ConnectDataBase = () => {
                     className="text-input"
                     // {...register("database")}
                   >
+                    <option value="">-- Select Database --</option>
                     {databases.map((db) => (
                       <option key={db} value={db}>
                         {db}
                       </option>
                     ))}
-                    <option value="">-- Select Database --</option>
-                    <option value="retailshop">retail shop</option>
+                    {/* <option value="retailshop">retail shop</option>
                     <option value="HMS">HMS</option>
                     <option value="database1">fyptest</option>
-                    <option value="LMS">LMS</option>
+                    <option value="LMS">LMS</option> */}
                   </Form.Control>
                   {/* {errors.database && (
                     <div className="invalid-feedback">
@@ -328,7 +337,7 @@ const ConnectDataBase = () => {
               )}
             </div>
           </div>
-        </Form>
+        </form>
         {/* Display Generated SQL (or form data, for now) */}
       </Card>
     </>
